@@ -52,21 +52,29 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-				sidebar: {
-					DEFAULT: 'hsl(var(--sidebar-background))',
-					foreground: 'hsl(var(--sidebar-foreground))',
-					primary: 'hsl(var(--sidebar-primary))',
-					'primary-foreground': 'hsl(var(--sidebar-primary-foreground))',
-					accent: 'hsl(var(--sidebar-accent))',
-					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
-					border: 'hsl(var(--sidebar-border))',
-					ring: 'hsl(var(--sidebar-ring))'
-				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				bento: 'var(--radius)'
+			},
+			boxShadow: {
+				'bento': 'var(--bento-shadow)',
+				'bento-hover': 'var(--bento-shadow-hover)',
+				'yellow-glow': 'var(--yellow-glow)'
+			},
+			backgroundImage: {
+				'hero-gradient': 'var(--hero-gradient)'
+			},
+			fontSize: {
+				'hero': 'var(--font-size-hero)',
+				'headline': 'var(--font-size-headline)',
+				'body': 'var(--font-size-body)'
+			},
+			fontWeight: {
+				'thin': 'var(--font-weight-thin)',
+				'bold': 'var(--font-weight-bold)'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +92,22 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fadeUp': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-up': 'fadeUp 0.6s ease-out forwards'
 			}
 		}
 	},
